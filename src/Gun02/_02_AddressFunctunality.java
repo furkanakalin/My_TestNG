@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class _02_Soru extends BaseDriver {
+public class _02_AddressFunctunality extends BaseDriver {
 
     @Test
     public void AddAddress(){
