@@ -4,10 +4,9 @@ import Utility.BaseDriver;
 import Utility.Tools;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class _06_Soru extends BaseDriver {
+public class _07_Soru extends BaseDriver {
 
     @Test
     public void Test(){
@@ -16,8 +15,8 @@ public class _06_Soru extends BaseDriver {
         newsletter.click();
         Tools.Bekle(1);
 
-        WebElement yes= driver.findElement(By.xpath("//input[@value='1']"));
-        yes.click();
+        WebElement no = driver.findElement(By.xpath("//input[@value='0']"));
+        no.click();
         Tools.Bekle(1);
 
         WebElement continuee= driver.findElement(By.xpath("//*[@class='btn btn-primary']"));
@@ -28,6 +27,5 @@ public class _06_Soru extends BaseDriver {
         //Assert.assertTrue(message.getText().toLowerCase().contains("success"), "Yanlış Mesaj");
 
         Tools.SuccessMessageValidation();
-
     }
 }
