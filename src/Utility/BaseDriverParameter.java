@@ -48,8 +48,8 @@ public class BaseDriverParameter {
     public void Kapanisislemleri(){
         System.out.println("Kapanisislemleri yapılıyor");
 
-        //Tools.Bekle(3);
-        //driver.quit();
+        Tools.Bekle(3);
+        driver.quit();
     }
     public void Login() {
 
