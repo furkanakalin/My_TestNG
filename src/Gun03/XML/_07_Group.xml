@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="My Suite">
+    <test name="My Test 1">
+
+        <classes>
+            <class name="Gun03._04_Group"></class>
+        </classes>
+
+        <groups>
+            <run>
+                <include name="Smoke Test"></include>
+            </run>
+        </groups>
+
+    </test>
+</suite>

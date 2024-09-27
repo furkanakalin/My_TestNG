@@ -76,5 +76,7 @@ public class _02_AddressFunctunality extends BaseDriver {
     public void DeleteAddress(){
         WebElement delete= driver.findElement(By.xpath("//*[text()='Delete']"));
         delete.click();
+
+        Tools.SuccessMessageValidation();
     }
 }
