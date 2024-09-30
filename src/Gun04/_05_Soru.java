@@ -3,6 +3,7 @@ package Gun04;
 import Utility.BaseDriverParameter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -33,6 +34,9 @@ public class _05_Soru extends BaseDriverParameter {
 
             WebElement oldprice=product.findElement(By.xpath("//*[@class='price-old']"));
             WebElement newprice=product.findElement(By.xpath("//*[@class='price-new']"));
+
+            Assert.assertTrue(oldprice.isDisplayed(),"Eski fiyat görünmüyor");
+            Assert.assertTrue(newprice.isDisplayed(),"Yeni fiyat görünmüyor");
 
             String stroldprice=oldprice.getText().replace("$","");
             String strnewprice= newprice.getText().replace("$","");
