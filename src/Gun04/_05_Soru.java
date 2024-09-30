@@ -1,7 +1,12 @@
 package Gun04;
 
 import Utility.BaseDriverParameter;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class _05_Soru extends BaseDriverParameter {
 
@@ -19,5 +24,26 @@ public class _05_Soru extends BaseDriverParameter {
     @Test
     public void Soru(){
 
+        WebElement specials= driver.findElement(By.xpath("//*[text()='Specials']"));
+        specials.click();
+
+        List<WebElement> products=driver.findElements(By.xpath("//*[@class='product-thumb']"));
+
+        for (WebElement product:products){
+
+            WebElement oldprice=product.findElement(By.xpath("//*[@class='price-old']"));
+            WebElement newprice=product.findElement(By.xpath("//*[@class='price-new']"));
+
+            String stroldprice=oldprice.getText().replace("$","");
+            String strnewprice= newprice.getText().replace("$","");
+
+            Double dbloldprice=Double.parseDouble(stroldprice);
+            Double dblnewprice=Double.parseDouble(strnewprice);
+
+            if (dbloldprice>dblnewprice)
+                System.out.println("İndirim var");
+            else
+                System.out.println("Hata var, indirim yapılmamış,");
+        }
     }
 }
