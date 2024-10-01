@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="My Suite">
+    <test name="My Test 1" parallel="tests" thread-count="2">
+        <parameter name="browsertype" value=""/>
+        <classes>
+            <class name="Gun05._04_Soru"></class>
+        </classes>
+    </test>
+
+    <test name="My Test 2">
+        <parameter name="browsertype" value="edge"/>
+        <classes>
+            <class name="Gun05._04_Soru"></class>
+        </classes>
+    </test>
+</suite>

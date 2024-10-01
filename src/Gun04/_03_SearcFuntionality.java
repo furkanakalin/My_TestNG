@@ -19,10 +19,10 @@ public class _03_SearcFuntionality extends BaseDriver {
         WebElement searchInput=driver.findElement(By.name("search"));
         searchInput.sendKeys(searchword+ Keys.ENTER);
 
-        List<WebElement> captions=driver.findElements(By.cssSelector("[class='caption']>h4"));
+            List<WebElement> captions=driver.findElements(By.cssSelector("[class='caption']>h4"));
 
-        for(WebElement e : captions)
-            Assert.assertTrue(e.getText().toLowerCase().contains(searchword.toLowerCase()),
-                    "Aranan kelime bulunamadı");
+            for(WebElement e : captions)
+                Assert.assertTrue(e.getText().toLowerCase().contains(searchword.toLowerCase()),
+                        "Aranan kelime bulunamadı");
     }
 }
