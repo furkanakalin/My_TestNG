@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="My Suite">
+    <test name="My Test 1">
+        <parameter name="searchtext" value="ipod"/>
+        <classes>
+            <class name="Gun07._02_Soru"></class>
+        </classes>
+    </test>
+</suite>
